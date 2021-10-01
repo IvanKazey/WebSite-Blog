@@ -1,0 +1,319 @@
+*,*::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+li,ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+  body{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: normal;
+	color: #333333;
+	
+
+  }
+
+.container {
+	width: 1300px;
+	margin: 0 auto;
+}
+
+.posrelative {
+	position: relative;
+}
+
+ .wrapper{
+	 max-width: 1438px;
+	 margin: 0 auto;
+ }
+ /* header  styles start*/
+ .header{
+	background-color: #F2F2F0;
+	position: fixed;
+	z-index: 3;
+	top:0;
+	left:0;
+	width: 100%;
+ } 
+ .header__wrapper {
+	
+	 display: flex;
+	 flex-wrap: wrap;
+	 align-items: center;
+	 justify-content: space-between;
+	 
+ }  
+.header__list{
+	display: flex;
+	 flex-wrap: wrap;
+	 
+}
+.header__item{
+	margin-right: 54px;
+	list-style-type: none;
+	
+}
+
+.header__link{
+	font-size: 18px;
+	line-height: 22px;
+	color: #333;
+	text-decoration: none;
+	
+}
+
+.header__link:hover,.header__link:focus,.header__link:active{
+	color: #40CEE2;
+}
+
+
+*,*::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+li,ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+  body{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: normal;
+	color: #333333;
+	
+
+  }
+
+.container {
+	width: 1300px;
+	margin: 0 auto;
+}
+
+.posrelative {
+	position: relative;
+}
+
+ .wrapper{
+	 max-width: 1438px;
+	 margin: 0 auto;
+ }
+ /* header  styles start*/
+ .header{
+	background-color: #F2F2F0;
+	position: fixed;
+	z-index: 3;
+	top:0;
+	left:0;
+	width: 100%;
+ } 
+ .header__wrapper {
+	
+	 display: flex;
+	 flex-wrap: wrap;
+	 align-items: center;
+	 justify-content: space-between;
+	 
+ }  
+.header__list{
+	display: flex;
+	 flex-wrap: wrap;
+	 
+}
+.header__item{
+	margin-right: 54px;
+	list-style-type: none;
+	
+}
+
+.header__link{
+	font-size: 18px;
+	line-height: 22px;
+	color: #333;
+	text-decoration: none;
+	
+}
+
+.header__link:hover,.header__link:focus,.header__link:active{
+	color: #40CEE2;
+}
+.premises{
+    margin-top: 130px;
+}
+.rov{
+	display: flex;
+	justify-content: space-between;
+	margin: 40px  200px;
+}
+.rectengle{
+	
+	
+	width: 200px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #545454;
+	font-weight: 400;
+	font-size: 16px;
+    line-height: 24px;
+    
+    background: #FFBC47;
+    border: 1px solid #FFBC47;
+    box-sizing: border-box;
+    border-radius: 35px;
+	}
+	
+	.yellow{
+        color: #FFBC47;
+        border: 2px solid #FFBC47; 
+        background: none;
+        
+    }
+    .yellow:hover{
+        color:#FFFFFF;
+		border:0;
+        background-color:  #FFBC47;
+      }
+
+	.example_servis{
+		width: 100%;
+	}
+	.clear_title{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 38px;
+	color: #545454;
+
+	}
+
+	.box{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+		width: 100%;
+		}
+	.block{
+		position: relative;
+        margin:50px 30px 0px 30px;
+        height: 300px;
+	}
+	.block_img img{
+		width: 100%;
+		height: 100% ;
+	
+	}
+	.block_name{
+		font-weight: normal;
+        font-size: 24px;
+        
+		line-height: 29px;
+		color:#FFFFFF;
+        text-align: left;
+       
+	}
+
+.footer{
+	margin-top: 50px;
+	background-color: #545454;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	color: #fff;
+	padding: 50px 200px;
+	justify-content: space-between;
+}
+.servis{
+font-weight: 500;
+font-size: 36px;
+line-height: 50px;
+}
+.list_txt{
+	
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 29px;
+
+}
+.list_txt a{
+	color: #FFFFFF;
+}
+.list_text{
+	line-height: 36px;
+}
+
+.block:hover {
+    opacity: 0.95;
+    bottom: 5px; 
+}
+.main{
+    padding-top: 44px;
+    display: flex;
+    
+}
+.sidebar_title{
+font-weight: 500;
+font-size: 32px;
+line-height: 38px;
+margin-bottom: 22px;
+
+color: #000000;
+}
+.sidebar_box{
+background: #F4F2F4;
+border-radius: 25px;
+width: 300px;
+}
+.sidebar_item{
+    padding: 35px 5px;
+}
+.sidebar_list{
+    font-size: 18px;
+    line-height: 29px;
+    color: #333333
+ }
+ 
+ a{
+     color: #333;
+ }
+ a:hover{
+    color: #40CEE2;
+ }
+ .content_main{
+     margin-left: 15px;
+ }
+ .main_title{
+ font-weight: 500;
+font-size: 32px;
+line-height: 38px;
+margin-bottom: 22px;
+
+color: #000000;
+ }
+ .main_box{
+    background: #F4F2F4;
+    border-radius: 25px;
+    padding: 15px;
+ }
+ .img_div{
+     position: absolute;
+     bottom: 15px;
+     display: flex;
+     width: 90%;
+     margin-left: 5%;
+
+ }
