@@ -46,7 +46,7 @@
 </header>
 
  <section class="login">
-    <form class="login__signin">
+    <form id="loginForm" class="login__signin">
       <h3 class="login__title">
         Вход в аккаунт
       </h3>
@@ -65,7 +65,7 @@
           <input type="checkbox" style="margin-right: 16px;">
           <p>Запомнить меня</p>
         </div>
-        <button class="standart-btn">Войти</button>
+        <button type="submit" class="standart-btn">Войти</button>
       </div>
     </form>
     <div class="login__register-link">
@@ -106,6 +106,52 @@
       </footer>
       
     </main> 
+
+  <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+      import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"
+    
+      const firebaseConfig = {
+        apiKey: "AIzaSyBaRTqsp4GQ5Mg3hHRFBS0yavRsarHfBL8",
+        authDomain: "cleaning-a8cf6.firebaseapp.com",
+        projectId: "cleaning-a8cf6",
+        storageBucket: "cleaning-a8cf6.appspot.com",
+        messagingSenderId: "1075091181224",
+        appId: "1:1075091181224:web:acd43c9e9a6d1a44a0fc9d"
+      };
+
+      const app = initializeApp(firebaseConfig);
+
+      // your function
+      var login = function(event) {
+          event.preventDefault();
+
+          console.log( event.target[0].value )
+
+          const formData = {
+            email: event.target[0].value,
+            password: event.target[1].value
+          }
+          
+          const auth = getAuth();
+          signInWithEmailAndPassword(auth, formData.email, formData.password)
+            .then((userCredential) => {
+              const user = userCredential.user;
+
+              console.log( user )
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+            });
+          
+      };
+
+      var form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", login, true);
+    
+    </script>
     </body>
     </html>
     

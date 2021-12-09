@@ -46,38 +46,21 @@
 </header>
   <section class="register container">
     <h3 class="register__title">Регистрация</h3>
-    <form>
+    <form id="registerForm">
       <p class="input__label">
         Ваша почта
       </p>
       <input type="text" class="standart-input register-input">
-      <p class="input__label">
-        Ваше имя
-      </p>
-      <input type="text" class="standart-input register-input">
-      <p class="input__label">
-        Ваша фамилия
-      </p>
-      <input type="text" class="standart-input register-input">
-      <p class="input__label">
-        Дата рождения
-      </p>
-      <div class="register__date">
-        <input type="text" placeholder="День" class="standart-input register__date-input">
-        <input type="text" placeholder="Месяц" class="standart-input register__date-input">
-        <input type="text" placeholder="Год" class="standart-input register__date-input">
-      </div>
-      <p class="input__label">
-        Логин
-      </p>
-      <input type="text" class="standart-input register-input">
+      
       <p class="input__label">
         Пароль
       </p>
       <input type="text" class="standart-input register-input">
+
       <div class="register__submit-handler">
-        <button class="standart-btn register-btn">Создать</button>
+        <button type="submit" class="standart-btn register-btn">Создать</button>
       </div>
+
     </form>
   </section>
   <footer class="footer">
@@ -110,5 +93,56 @@
   </footer>
   
 </main> 
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBaRTqsp4GQ5Mg3hHRFBS0yavRsarHfBL8",
+    authDomain: "cleaning-a8cf6.firebaseapp.com",
+    projectId: "cleaning-a8cf6",
+    storageBucket: "cleaning-a8cf6.appspot.com",
+    messagingSenderId: "1075091181224",
+    appId: "1:1075091181224:web:acd43c9e9a6d1a44a0fc9d"
+  };
+
+  const app = initializeApp(firebaseConfig);
+
+  var register = function(event) {
+      event.preventDefault();
+
+      const formData = {
+        email: event.target[0].value,
+        password: event.target[1].value
+      }
+
+      console.log(window.location.href)
+
+      const url = window.location.href.split("/")
+      url[ url.length -1 ] = "log.html"
+
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, formData.email, formData.password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log( user )
+
+          window.location.replace(url.join("/"));
+
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        });
+      
+  };
+
+  var form = document.getElementById("registerForm");
+
+  form.addEventListener("submit", register, true);
+
+</script>
+
 </body>
 </html>
